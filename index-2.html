@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Hezal — A Little Grand Line of Love</title>
+<style>
+:root {
+  --site-primary: #9d253e;
+  --site-secondary: #f4d6c7;
+  --site-background: #fff8f0;
+  --site-on-primary: #ffffff;
+  --site-on-secondary: #4e2530;
+  --site-on-background: #3b1d2a;
+  --site-font-body: Georgia, "Times New Roman", serif;
+  --site-font-heading: "Trebuchet MS", Arial, sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--site-background); color: var(--site-on-background); font-family: var(--site-font-body); }
+#app { min-height: 100vh; background-color: light-dark(var(--site-background), #21151b); color: light-dark(var(--site-on-background), #fff0e7); overflow: hidden; }
+.hero { position: relative; min-height: 92vh; display: grid; place-items: center; text-align: center; padding: calc(42px * var(--site-spacing-scale)) 20px; background: radial-gradient(circle at 20% 20%, #f6c8b8 0, transparent 30%), radial-gradient(circle at 85% 25%, #e9b5c0 0, transparent 28%), linear-gradient(135deg, #fff0dc, #f8dbe0 55%, #f5c8b9); color: #4b1d2b; isolation: isolate; }
+.hero:before, .hero:after { content: "✦"; position: absolute; font-size: 7rem; color: #fff8e9; opacity: calc(.6 * var(--site-decoration-opacity)); z-index: -1; }
+.hero:before { left: 7%; top: 12%; transform: rotate(-15deg); }
+.hero:after { right: 8%; bottom: 12%; transform: rotate(20deg); }
+.stamp { display: inline-block; border: 1px solid #9d253e; border-radius: 99px; padding: 8px 15px; letter-spacing: .16em; text-transform: uppercase; font: 700 .72rem var(--site-font-heading); }
+h1, h2, h3 { font-family: var(--site-font-heading); }
+h1 { font-size: clamp(3.6rem, 12vw, 8rem); line-height: .9; margin: 22px 0 15px; letter-spacing: -.07em; }
+.script { font-size: clamp(1.2rem, 3vw, 1.7rem); font-style: italic; }
+.sub { max-width: 540px; line-height: 1.7; font-size: 1.05rem; margin: 15px auto 26px; }
+.btn { display: inline-block; cursor: pointer; border: 0; border-radius: 999px; padding: 14px 22px; background: var(--site-primary); color: var(--site-on-primary); font: 700 .95rem var(--site-font-heading); box-shadow: 0 8px 20px #9d253e30; transition: transform .2s, background .2s; }
+.btn:hover { transform: translateY(-2px); background: #741a30; }
+.btn:focus-visible, button:focus-visible { outline: 3px solid #e3a34e; outline-offset: 4px; }
+.section { padding: 75px 20px; max-width: 1040px; margin: auto; }
+.eyebrow { color: #a3394d; letter-spacing: .18em; text-transform: uppercase; font: 700 .75rem var(--site-font-heading); }
+h2 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 12px 0 20px; line-height: 1.05; }
+.center { text-align: center; }
+.paper { background: light-dark(#fffdf9, #30232b); border: 1px solid light-dark(#edd8cb, #62424f); border-radius: calc(24px * var(--site-radius-scale)); padding: 28px; box-shadow: 0 12px 35px #5c27300d; }
+.crew { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 30px; }
+.crew-card { background: #fff1df; border-radius: 20px; padding: 23px 18px; color: #48212a; border: 1px solid #edc8b9; }
+.emoji { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+.crew-card h3 { margin: 5px 0 8px; }
+.crew-card p { line-height: 1.6; margin: 0; font-size: .96rem; }
+.quote { font-size: clamp(1.25rem, 3vw, 1.8rem); line-height: 1.6; font-style: italic; }
+.letter { max-width: 740px; margin: 25px auto 0; line-height: 1.9; font-size: 1.08rem; }
+.reveal { max-width: 700px; margin: 25px auto 0; }
+.hidden-note { display: none; margin-top: 24px; animation: fadein .7s ease both; }
+.hidden-note.show { display: block; }
+.song-card { background: #4b1d2b; color: #fff2e6; border-radius: calc(25px * var(--site-radius-scale)); padding: 32px; text-align: center; }
+.song-card p { line-height: 1.7; }
+.music-note { font-size: 3rem; animation: bob 2s ease-in-out infinite; display: inline-block; }
+footer { padding: 35px 20px 50px; text-align: center; color: #9b5360; }
+.heart { color: #b82d4c; }
+@keyframes fadein { from {opacity:0; transform: translateY(10px)} to {opacity:1; transform:translateY(0)} }
+@keyframes bob { 50% { transform: translateY(-6px) rotate(5deg); } }
+@media (max-width: 650px) { .hero { min-height: 88vh; } .crew { grid-template-columns: 1fr; } .section { padding: 55px 18px; } .paper { padding: 23px; } }
+@media (prefers-reduced-motion: reduce) { *, *:before, *:after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<main id="app" data-sites-preview-theme="custom">
+  <section class="hero">
+    <div>
+      <span class="stamp">A little treasure from the Grand Line</span>
+      <h1>Hezal<span class="heart">♥</span></h1>
+      <div class="script">Your own little birthday island</div>
+      <p class="sub">Some people make ordinary days feel like an adventure. This tiny corner of the internet is just for you — with a little One Piece, a little romance, and lots of birthday warmth.</p>
+      <button class="btn" onclick="document.getElementById('message').scrollIntoView({behavior:'smooth'})">Open your little surprise ↓</button>
+      <p style="font-size:.85rem;margin-top:22px">19 November · Your special day ✨</p>
+      <div style="margin-top:18px">
+        <p id="musicHint" style="font-size:.88rem;max-width:420px;margin:10px auto 0">♫ Your birthday song is ready to play in the background. If your browser blocks autoplay, use the small fallback button below.</p>
+        <button class="btn" id="musicBtn" onclick="startBirthdayMusic()" style="display:none;margin-top:12px">Start background music ♫</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section center">
+    <div class="eyebrow">A crew of good wishes</div>
+    <h2>Every great adventure needs a crew.</h2>
+    <p style="max-width:620px;margin:0 auto;line-height:1.8">So here's a tiny Straw Hat-style wish list for your new year around the sun.</p>
+    <div class="crew">
+      <article class="crew-card"><span class="emoji">🍖</span><h3>Luffy's wish</h3><p>May your year be full of laughter, delicious food, and people who let you be completely yourself.</p></article>
+      <article class="crew-card"><span class="emoji">🍊</span><h3>Nami's wish</h3><p>May you discover beautiful places, make brave choices, and collect memories worth more than treasure.</p></article>
+      <article class="crew-card"><span class="emoji">🌸</span><h3>Chopper's wish</h3><p>May you be gentle with yourself, find reasons to smile, and remember how much your presence matters.</p></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paper center">
+      <div class="eyebrow">A note, just for you</div>
+      <h2>To Hezal, on her birthday</h2>
+      <div class="letter">
+        <p>Hey Hezal,</p>
+        <p>Happy Birthday! 🎂 I hope 19 November brings you the kind of happiness that stays even after the candles go out. May this next chapter be full of new adventures, little wins, good anime, creative ideas, and people who make you feel appreciated.</p>
+        <p>Like every great One Piece journey, life won't always go exactly as planned — but I hope you keep finding your own treasure along the way. Keep being curious, keep creating, and keep doing the things that make you <em>you</em>.</p>
+        <p>And if this little page makes you smile even once, then it's done its job. You deserve a lovely birthday and a year full of moments that feel like your favourite episode.</p>
+        <p>Have the happiest birthday, Hezal. ✨</p>
+      </div>
+      <p style="margin-top:25px;font-style:italic">— Someone wishing you a little extra happiness</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="song-card">
+      <div class="music-note">♫</div>
+      <div class="eyebrow" style="color:#f5c5bd;margin-top:10px">A song for the mood</div>
+      <h2 style="margin-bottom:12px">“O Meri Laila”</h2>
+      <p>A soft, romantic soundtrack — “O Meri Laila” from Yes Boss. Start the song with the button below, then explore the surprise.</p>
+      <p style="font-size:.9rem;color:#f3d9d3">If the player doesn't start inside the page, use the open-on-YouTube button.</p>
+      <audio id="birthdayAudio" preload="auto" loop>
+        <source src="birthday-song.mp3" type="audio/mpeg">
+      </audio>
+      <p id="songStatus" style="font-size:.9rem;color:#f3d9d3">Your song is ready to play on this page. ♫</p>
+      <button class="btn" id="songFallback" style="background:#f4d6c7;color:#4b1d2b" onclick="startBirthdayMusic()">Start background music ♫</button>
+    </div>
+  </section>
+
+  <section class="section center" id="message">
+    <div class="eyebrow">One last little surprise</div>
+    <h2>There's a wish tucked in here…</h2>
+    <p style="line-height:1.8;max-width:570px;margin:0 auto">Tap the button when you're ready. No treasure map required. 🗺️</p>
+    <div class="reveal">
+      <button class="btn" id="revealBtn" onclick="revealWish()">Reveal my birthday wish ✨</button>
+      <div class="paper hidden-note" id="wish">
+        <div style="font-size:2.5rem">💌</div>
+        <p class="quote">“May your life be as big as the ocean, your dreams as endless as the Grand Line, and your days filled with the kind of love and joy that make you glad you’re here.”</p>
+        <p>Happy Birthday, Hezal! 🎉</p>
+        <p style="font-size:.85rem">19 November · A new chapter begins.</p>
+      </div>
+    </div>
+  </section>
+  <footer>Made with a little <span class="heart">♥</span>, a little anime magic, and birthday wishes for Hezal.</footer>
+</main>
+<script>
+let songStarted = false;
+function startBirthdayMusic() {
+  const audio = document.getElementById('birthdayAudio');
+  audio.play().then(() => {
+    songStarted = true;
+    document.getElementById('songFallback').style.display = 'none';
+    document.getElementById('musicBtn').style.display = 'none';
+    document.getElementById('musicHint').textContent = '♫ Your song is playing in the background. Enjoy the surprise!';
+    document.getElementById('songStatus').textContent = 'Now playing: O Meri Laila ♫';
+  }).catch(() => {
+    document.getElementById('songStatus').textContent = 'Tap the button once to start the song. Your browser blocked automatic playback.';
+  });
+}
+function tryAutoplay() {
+  const audio = document.getElementById('birthdayAudio');
+  audio.volume = 0.8;
+  audio.play().then(() => {
+    songStarted = true;
+    document.getElementById('songFallback').style.display = 'none';
+    document.getElementById('musicBtn').style.display = 'none';
+    document.getElementById('musicHint').textContent = '♫ Your song is playing in the background. Enjoy the surprise!';
+    document.getElementById('songStatus').textContent = 'Now playing: O Meri Laila ♫';
+  }).catch(() => {
+    document.getElementById('songStatus').textContent = 'Autoplay may be blocked by the browser. Tap once to start the background song.';
+    document.getElementById('songFallback').style.display = 'inline-block';
+    document.getElementById('musicBtn').style.display = 'inline-block';
+  });
+}
+window.addEventListener('load', tryAutoplay);
+function revealWish() {
+  const wish = document.getElementById('wish');
+  wish.classList.add('show');
+  document.getElementById('revealBtn').textContent = 'Your wish is here ♥';
+  document.getElementById('revealBtn').disabled = true;
+  wish.scrollIntoView({behavior:'smooth', block:'center'});
+}
+</script>
+</body>
+</html>
